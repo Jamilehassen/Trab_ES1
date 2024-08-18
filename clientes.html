@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Clientes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Controle de Produtos</a></li>
+                <li><a href="historico.html">Histórico de Consumo</a></li>
+                <li><a href="pedidos.html">Controle de Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cadastro de Cliente</h2>
+            <form id="cliente-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" required>
+                <button type="submit">Adicionar Cliente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Clientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="clientes-lista">
+                    <!-- Clientes serão inseridos dinamicamente aqui -->
+                     <!-- Exemplo de linha -->
+                    <tr>
+                        <td>1</td>
+                        <td>Jamile Hassen Sá</td>
+                        <td>jamilehassensa@gmail.com</td>
+                        <td>12996163910</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Aliana Wakassugui</td>
+                        <td>AlianaWakassugui@gmail.com</td>
+                        <td>12999999999</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante Delícias. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

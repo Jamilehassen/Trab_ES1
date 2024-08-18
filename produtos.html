@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Produtos e Ingredientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Produtos e Ingredientes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clientes.html">Controle de Clientes</a></li>
+                <li><a href="historico.html">Histórico de Consumo</a></li>
+                <li><a href="pedidos.html">Controle de Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produtos">
+            <h2>Cadastro de Pratos</h2>
+            <form id="produto-form">
+                <label for="nome-produto">Nome do Prato:</label>
+                <input type="text" id="nome-produto" required>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" required>
+                <label for="pontos-produto">Pontos:</label>
+                <input type="number" id="pontos-produto" required>
+                <label for="ingredientes-necessarios">Ingredientes Necessários (separados por vírgula):</label>
+                <input type="text" id="ingredientes-necessarios" required>
+                <button type="submit">Adicionar Produto</button>
+            </form>
+
+            <h2>Lista de Pratos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Pontos</th>
+                        <th>Ingredientes</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="produtos-lista">
+                    <!-- Produtos serão inseridos dinamicamente aqui -->
+                    <tr>
+                        <td>1</td>
+                        <td>Pizza Margherita</td>
+                        <td>40,00</td>
+                        <td>40</td>
+                        <td>400 g de farinha de trigo, 15 g / 1 tablete de fermento biológico, 1 xícara (chá) de água morna, 1 colher (chá) de sal</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pasta ao molho pesto</td>
+                        <td>35,00</td>
+                        <td>35</td>
+                        <td>100 g de macarrão espaguete, ⅓ de xícara (chá) de molho pesto com castanha-de-caju</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="ingredientes">
+            <h2>Controle de Ingredientes</h2>
+            <form id="ingrediente-form">
+                <label for="nome-ingrediente">Nome do Ingrediente:</label>
+                <input type="text" id="nome-ingrediente" required>
+                <label for="quantidade-ingrediente">Quantidade:</label>
+                <input type="number" id="quantidade-ingrediente" required>
+                <button type="submit">Adicionar Ingrediente</button>
+            </form>
+
+            <h2>Lista de Ingredientes no Estoque</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="ingredientes-lista">
+                    <!-- Ingredientes serão inseridos dinamicamente aqui -->
+                    <tr>
+                        <td>Farinha de trigo</td>
+                        <td>5 kg</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sal</td>
+                        <td>10 kg</td>
+                        <td><button>Editar</button><button>Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Consumo e Pontuação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico de Consumo e Pontuação</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="clientes.html">Controle de Clientes</a></li>
+                <li><a href="produtos.html">Controle de Produtos</a></li>
+                <li><a href="pedidos.html">Controle de Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Histórico</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Pontos Produto</th>
+                    <th>Pontos Acumulados</th>
+                </tr>
+            </thead>
+            <tbody id="historico-lista">
+                <!-- Histórico será inserido dinamicamente aqui -->
+                <tr>
+                    <td>Jamile Hassen Sá</td>
+                    <td>Salada Ceaser</td>
+                    <td>35</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>Aliana Wakassugui</td>
+                    <td>Pasta ao Molho Pesto</td>
+                    <td>40</td>
+                    <td>55</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Registrar Novo Consumo</h2>
+        <form id="historico-form">
+            <label for="cliente-historico">Cliente:</label>
+            <input type="text" id="cliente-historico" name="cliente-historico" required>
+
+            <label for="produto-historico">Produto:</label>
+            <input type="text" id="produto-historico" name="produto-historico" required>
+
+            <button type="submit">Registrar Consumo</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante Delícias. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
