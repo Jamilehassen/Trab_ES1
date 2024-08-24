@@ -40,9 +40,10 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
-                        <th>Preço</th>
+                        <th>Preço de Venda</th>
                         <th>Pontos</th>
                         <th>Ingredientes</th>
+                        <th>Preço de Compra</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -51,17 +52,19 @@
                     <tr>
                         <td>1</td>
                         <td>Pizza Margherita</td>
-                        <td>40,00</td>
+                        <td>R$ 40,00</td>
                         <td>40</td>
                         <td>400 g de farinha de trigo, 15 g / 1 tablete de fermento biológico, 1 xícara (chá) de água morna, 1 colher (chá) de sal</td>
+                        <td>R$ 20,00</td>
                         <td><button>Editar</button><button>Excluir</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Pasta ao molho pesto</td>
-                        <td>35,00</td>
+                        <td>R$ 35,00</td>
                         <td>35</td>
                         <td>100 g de macarrão espaguete, ⅓ de xícara (chá) de molho pesto com castanha-de-caju</td>
+                        <td>R$ 16,90</td>
                         <td><button>Editar</button><button>Excluir</button></td>
                     </tr>
                 </tbody>
@@ -75,6 +78,10 @@
                 <input type="text" id="nome-ingrediente" required>
                 <label for="quantidade-ingrediente">Quantidade:</label>
                 <input type="number" id="quantidade-ingrediente" required>
+                <label for="base">Base (Kg):</label>
+                <input type="number" id="base" required>
+                <label for="fornecedor">Preço por Quilograma:</label>
+                <input type="number" id="fornecedor" required>
                 <button type="submit">Adicionar Ingrediente</button>
             </form>
 
@@ -84,6 +91,9 @@
                     <tr>
                         <th>Nome</th>
                         <th>Quantidade</th>
+                        <th>Base (Kg)</th>
+                        <th>Preço de Compra</th>
+                        <th>Custo</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -92,11 +102,17 @@
                     <tr>
                         <td>Farinha de trigo</td>
                         <td>5 kg</td>
+                        <td>1 kg</td>
+                        <td>R$ 5,00</td>
+                        <td>R$ 25,00</td>
                         <td><button>Editar</button><button>Excluir</button></td>
                     </tr>
                     <tr>
                         <td>Sal</td>
                         <td>10 kg</td>
+                        <td>1 kg</td>
+                        <td>R$ 3,50</td>
+                        <td>R$ 30,50</td>
                         <td><button>Editar</button><button>Excluir</button></td>
                     </tr>
                 </tbody>
