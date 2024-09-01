@@ -5,16 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Simula o tipo de usuário logado (cliente ou funcionário)
+        function definirUsuario(tipo) {
+            const navFuncionario = document.getElementById('menu-funcionario');
+            const navCliente = document.getElementById('menu-cliente');
+            const menuCompleto = document.getElementById('menu-completo');
+            const menuCliente = document.getElementById('menu-cliente-view');
+
+            if (tipo === 'funcionario') {
+                navFuncionario.style.display = 'block';
+                navCliente.style.display = 'none';
+                menuCompleto.style.display = 'block';
+                menuCliente.style.display = 'none';
+            } else if (tipo === 'cliente') {
+                navFuncionario.style.display = 'none';
+                navCliente.style.display = 'block';
+                menuCompleto.style.display = 'none';
+                menuCliente.style.display = 'block';
+            }
+        }
+
+        // Exemplo: Altere para 'cliente' ou 'funcionario' para simular o login
+        window.onload = function() {
+            definirUsuario('cliente');  // Altere para 'funcionario' conforme necessário
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Gestão de restaurante</h1>
         <nav>
-            <ul>
+            <ul id="menu-funcionario" style="display: none;">
                 <li><a href="clientes.html">Controle de Clientes</a></li>
                 <li><a href="historico.html">Histórico de Consumo e Pontuação</a></li>
                 <li><a href="produtos.html">Controle de Pratos</a></li>
                 <li><a href="pedidos.html">Controle de Pedidos</a></li>
+            </ul>
+            <ul id="menu-cliente" style="display: none;">
+                <li><a href="login.html">Login cliente</a></li>
+                <li><a href="login_funcionario.html">Login funcionário</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +55,33 @@
             <p>Explore nosso cardápio e descubra os melhores pratos feitos com carinho e ingredientes frescos. Aproveite as promoções e acumule pontos em cada compra!</p>
         </section>
 
-        <section class="menu">
+        <section id="menu-completo" class="menu" style="display: none;">
+            <h2>Cardápio</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="./img/pizza.jpg" alt="Pizza">
+                    <h3>Pizza Margherita</h3>
+                    <p>R$ 40,00 - 40 Pontos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="./img/pasta.webp" alt="Pasta">
+                    <h3>Pasta ao Molho Pesto</h3>
+                    <p>R$ 35,00 - 35 Pontos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="./img/salada.webp" alt="Salada">
+                    <h3>Salada Caesar</h3>
+                    <p>R$ 25,00 - 25 Pontos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="./img/brownie.jpg" alt="Sobremesa">
+                    <h3>Sobremesa Brownie</h3>
+                    <p>R$ 15,00 - 15 Pontos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu-cliente-view" class="menu" style="display: none;">
             <h2>Cardápio</h2>
             <div class="grid-container">
                 <div class="grid-item">
